@@ -12,9 +12,8 @@ public class Grades {
 
     public void gradeReport() {
         for (int i = 0; i < grades.length; i++) {
-            System.out.println(this.grades[i]) 
+            System.out.println(this.grades[i]);
         }
-        
 
     }
 
