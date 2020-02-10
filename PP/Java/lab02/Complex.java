@@ -1,19 +1,38 @@
+/**
+ * Complex
+ */
 public class Complex {
 
-    double real, img;
+    double real, imagi;
 
-    // constructor to initialize the complex number
-    Complex(double real, double img) {
+    Complex(double real, double imagi) {
         this.real = real;
-        this.img = img;
+        this.imagi = imagi;
     }
 
-    public static Complex sum(Complex c1, Complex c2) {
-        Complex res = new Complex(0, 0);
-
-        res.real = c1.real + c2.real;
-        res.img = c1.img + c2.img;
-        // returning the output complex number
-        return res;
+    public static Complex sum(Complex obj1, Complex obj2) {
+        double real1 = obj1.real + obj2.real;
+        double imagi1 = obj1.imagi + obj2.imagi;
+        Complex result = new Complex(real1, imagi1);
+        return result;
     }
+
+    public static Complex diff(Complex obj1, Complex obj2) {
+        double real1 = obj1.real - obj2.real;
+        double imagi1 = obj1.imagi - obj2.imagi;
+        Complex result = new Complex(real1, imagi1);
+        return result;
+    }
+
+    public static Complex mul(Complex obj1, Complex obj2) {
+        double real1 = obj1.real * obj2.real - obj1.imagi * obj2.imagi;
+        double imagi1 = obj1.real * obj2.imagi + obj2.real * obj1.imagi;
+        Complex result = new Complex(real1, imagi1);
+        return result;
+    }
+
+    public void disp() {
+        System.out.println(this.real + " + " + this.imagi + "i");
+    }
+
 }

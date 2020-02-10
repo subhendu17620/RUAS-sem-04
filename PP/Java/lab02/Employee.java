@@ -8,14 +8,14 @@ public class Employee {
     double mSalary;
     int workHours;
 
-    // constructor - initialing variables
+    // constructor ---- to initialing variables
     Employee(String fName, String lName, double mSalary) {
         this.fName = fName;
         this.lName = lName;
         this.mSalary = mSalary;
     }
 
-    // setInfo - to update
+    // setInfo -- to update
     public void setInfo(double mSalary, int workHours) {
         if (mSalary >= 0) {
             this.mSalary = mSalary;

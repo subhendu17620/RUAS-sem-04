@@ -1,9 +1,4 @@
-function [y] = rungeKutta(f,yo,xo,h,xn)
-% f=@(x,y) 3*x+y/2;
-% xo=0;
-% y0=1;
-% h=0.05;
-% xn=0.4;
+function [x,y] = milnes_method(x0,y0,xn,h)
 
 x= xo:h:xn;
 n = length(x);
@@ -16,8 +11,16 @@ for i=2:n
     k4 = h*f(x(i-1)+h,y(i-1)+k3);
     y(i) = y(i-1)+(1/6)*(k1+2*k2+2*k3+k4);
 end
-disp(y);
-z = eval(dsolve('Dy=3*x+y/2','y(xo)=yo','x'));
-plot(x,y,'r',x,z,'*')
+for i=4:n-1`
+    y(i-1)=y(i-3)+(4*h/3)*(2*f(x))
+for j=1:maxit
+    y(i+1) = y(y-1)+(h/3)*f(x(i-1),,y(i-1)+4*f(x(i),y(i))+f(x(i+1),yp);
+if abs(yp-y(i+1)<tol
+break;
+end
+yp=y(i+1);
+end
+end
+plot(x,y,'r--')
 end
 
