@@ -8,23 +8,27 @@ import java.util.*;
 public class delDupElement {
 
     public static void main(String[] args) {
-        int[] array = new int[] { 1, 1, 2, 1, 2, 2, 3, 7, 3, 1 };
-        int n = 0;
-
-        // Arrays.sort(array);
-        n = array.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n; j++) {
-                if (array[i] == array[i + 1]) {
-                    array[j] = array[i];
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size : ");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("enter element :");
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    arr[j] = arr[n - 1];
                     n--;
                     j--;
                 }
             }
         }
-        for (int j = 0; j < n; j++) {
-            System.out.println(array[j]);
+        System.out.print("New array:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
-
+        sc.close();
     }
 }
