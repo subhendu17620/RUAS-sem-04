@@ -1,4 +1,4 @@
-function [] = oneD_heat(t0,tn,x0,xm,h,k,c)
+function [u] = oneD_heat(t0,tn,x0,xm,h,k,c)
 
  t= t0:k:tn;
  x= x0:h:xm;
