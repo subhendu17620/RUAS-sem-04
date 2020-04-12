@@ -40,7 +40,7 @@ public class App {
             System.out.println("03: Cancel booked Ticket");
             System.out.println("04: Get Baggage Limit using PNR");
             System.out.println("05: Exit");
-            System.out.println("Enter Choice ");
+            System.out.print("Enter Choice :: ");
 
             final int choice = sc.nextInt();
 
@@ -63,7 +63,7 @@ public class App {
                                     System.out.println("Enter Baggage (in Kgs): ");
                                     final int Bag = sc.nextInt();
                                     if (Bag > 20) {
-                                        System.out.println("Baggage more than 35 Kgs not Allowed");
+                                        System.out.println("Baggage more than 20 Kgs not Allowed");
                                     } else {
                                         billPrice += genBill(Bag, 15) * 2000;
                                     }
@@ -103,7 +103,7 @@ public class App {
                                     System.out.println("Enter Baggage (in Kgs): ");
                                     final int Bag = sc.nextInt();
                                     if (Bag > 40) {
-                                        System.out.println("Baggage more than 35 Kgs not Allowed");
+                                        System.out.println("Baggage more than 40 Kgs not Allowed");
                                     } else {
                                         billPrice += genBill(Bag, 30) * 4000;
                                     }
@@ -149,7 +149,7 @@ public class App {
                                 if (Fticket.checkStatus(PNRent)) {
                                     System.out.print("Ticket is confirmed");
                                 } else {
-                                    System.out.print("Not found");
+                                    System.out.print("PNR Not found");
                                 }
 
                             } else {

@@ -42,10 +42,7 @@ public class Flight {
     }
 
     public boolean cancelTicket(final String PNR) {
-        if (!PNRbook.contains(PNR)) {
-            System.out.println("PNR not found !!");
-            return false;
-        }
+
         this.PNRbook.set(PNRbook.indexOf(PNR), null);
         return true;
     }
