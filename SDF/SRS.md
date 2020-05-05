@@ -4,7 +4,7 @@
 
 
 
-FR1:  the system should allow users to browse movies available to watch.
+FR1: the system should allow users to browse movies available to watch.
 
 FR2: the system should allow new users to register and existing users to login.
 
