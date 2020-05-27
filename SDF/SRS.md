@@ -1,9 +1,5 @@
 
 
-
-
-
-
 FR1: the system should allow users to browse movies available to watch.
 
 FR2: the system should allow new users to register and existing users to login.
@@ -12,7 +8,7 @@ FR3:  the system should allow users to filter movies.
 
 FR4: the software should display movie description.
 
-FR5:  the system should allow user to view vacant and booked seats separately.
+FR5:  the system should allow user to view vacant seats and book seats.
 
 FR6: the software should support multiple payment options.
 
